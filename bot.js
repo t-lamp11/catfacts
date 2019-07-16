@@ -4,7 +4,7 @@ var HTTPS = require('https'),
 
 function respond() {
     var request = JSON.parse(this.req.chunks[0]),
-        botRegex = /cat\s?fact[sz]?/i;
+        botRegex = /cat\s*facts*/i;
 
     if(request.text && botRegex.test(request.text)) {
         this.res.writeHead(200);
